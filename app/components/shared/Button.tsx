@@ -3,7 +3,7 @@ import { VariantProps, cva } from "class-variance-authority"
 import { ButtonHTMLAttributes, FC, forwardRef } from "react"
 import { Loader2 } from "lucide-react"
 
-const buttonVariants = cva(
+export const buttonVariants = cva(
     'active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-color focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-ooffset-2 disabled:opacity-50 dark:ring-slate-400 disabled:pointer-events-none dark:focus:ring-slate-900',
     {
         variants: {
@@ -47,7 +47,8 @@ const Button: FC<ButtonProps> = forwardRef<HTMLButtonElement, ButtonProps> (({
                 disabled={isLoding}
                 {...props}
             >
-                {isLoding ? <Loader2 className='mr-2 h-4 w-4 animate-spin'/>}
+                {children}
+                {isLoding && <Loader2 className='mr-2 h-4 w-4 animate-spin'/>}
             </button>
     )
 })
