@@ -7,3 +7,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.dark, .three-d{
+  text-shadow: 0 5px 0 #533519,
+}
+
+.three-d{
+  text-shadow: none;
+}
