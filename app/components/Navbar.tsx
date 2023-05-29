@@ -3,6 +3,7 @@ import Link from "next/link"
 import { buttonVariants } from "./shared/Button"
 import SignInButton from "./SignInButton"
 import SignOutButton from "./SignOutButton"
+import ThemeToggle from "./ThemeToggle"
 
 interface NavbarProps {}
 
